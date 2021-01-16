@@ -1658,6 +1658,13 @@ namespace QuantConnect.Brokerages.InteractiveBrokers
             try
             {
                 _accountHoldingsResetEvent.Reset();
+
+                // SJ - temp workaround for corporate action breaking things
+                if (e.Contract.PrimaryExch == "CORPACT")
+                {
+                    return;
+                }
+                
                 var holding = CreateHolding(e);
                 _accountData.AccountHoldings[holding.Symbol.Value] = holding;
             }

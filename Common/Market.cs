@@ -60,6 +60,7 @@ namespace QuantConnect
             Tuple.Create(CME, 23),
             Tuple.Create(SGX, 24),
             Tuple.Create(HKFE, 25),
+            Tuple.Create(Eurex, 26),
         };
 
         static Market()
@@ -154,6 +155,11 @@ namespace QuantConnect
         /// </summary>
         public const string GDAX = "gdax";
 
+        /// <summary>
+        /// Eurex futures
+        /// </summary>
+        public const string Eurex = "eurex";
+        
         /// <summary>
         /// Kraken
         /// </summary>

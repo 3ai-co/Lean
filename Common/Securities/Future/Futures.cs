@@ -85,6 +85,12 @@ namespace QuantConnect.Securities
             /// </summary>
             /// <returns>The symbol</returns>
             public const string Oats = "ZO";
+
+            /// <summary>
+            /// Rough Rice Futures
+            /// </summary>
+            /// <returns>The symbol</returns>
+            public const string RoughRice = "RR";
         }
 
         /// <summary>
@@ -189,6 +195,18 @@ namespace QuantConnect.Securities
             public const string BTC = "BTC";
 
             /// <summary>
+            /// Swedish Krona Futures
+            /// </summary>
+            /// <returns>The symbol</returns>
+            public const string SEK = "SEK";
+
+            /// <summary>
+            /// Indian Rupee Futures
+            /// </summary>
+            /// <returns>The symbol</returns>
+            public const string SIR = "SIR";
+
+            /// <summary>
             /// Canadian Dollar/Japanese Yen Futures
             /// </summary>
             /// <returns>The symbol</returns>
@@ -223,6 +241,24 @@ namespace QuantConnect.Securities
             /// </summary>
             /// <returns>The symbol</returns>
             public const string EURSEK = "ESK";
+
+            /// <summary>
+            /// Euro/Swiss Franc Futures
+            /// </summary>
+            /// <returns>The symbol</returns>
+            public const string EURCHF = "RF";
+
+            /// <summary>
+            /// Euro/British Pound Futures
+            /// </summary>
+            /// <returns>The symbol</returns>
+            public const string EURGBP = "RP";
+
+            /// <summary>
+            /// Euro/Japanese Yen Futures
+            /// </summary>
+            /// <returns>The symbol</returns>
+            public const string EURJPY = "RY";
 
             /// <summary>
             /// E-mini Japanese Yen Futures
@@ -549,6 +585,12 @@ namespace QuantConnect.Securities
             public const string Ethanol = "EH";
 
             /// <summary>
+            /// Denatured Ethanol Futures
+            /// </summary>
+            /// <returns>The symbol</returns>
+            public const string DenaturedEthanol = "ET";
+
+            /// <summary>
             /// European Naphtha (Platts) Crack Spread Futures
             /// </summary>
             /// <returns>The symbol</returns>
@@ -626,6 +668,12 @@ namespace QuantConnect.Securities
             public const string HeatingOil = "HO";
 
             /// <summary>
+            /// Heating Oil Futures ICE
+            /// </summary>
+            /// <returns>The symbol</returns>
+            public const string HeatingOilIce = "IO";
+
+            /// <summary>
             /// Natural Gas (Henry Hub) Penultimate Financial Futures
             /// </summary>
             /// <returns>The symbol</returns>
@@ -644,10 +692,22 @@ namespace QuantConnect.Securities
             public const string Gasoline = "RB";
 
             /// <summary>
+            /// NYH (RBOB) Gasoline Futures
+            /// </summary>
+            /// <returns>The symbol</returns>
+            public const string NyhRbobGasoline = "IG";
+
+            /// <summary>
             /// Natural Gas Futures
             /// </summary>
             /// <returns>The symbol</returns>
             public const string NaturalGas = "NG";
+
+            /// <summary>
+            /// UK Natural Gas Futures
+            /// </summary>
+            /// <returns>The symbol</returns>
+            public const string UkNaturalGas = "UNG";
 
             /// <summary>
             /// Brent Crude Futures
@@ -660,6 +720,12 @@ namespace QuantConnect.Securities
             /// </summary>
             /// <returns>The symbol</returns>
             public const string LowSulfurGasoil = "G";
+
+            /// <summary>
+            /// EUA Futures (Emissions) - ICE
+            /// </summary>
+            /// <returns>The symbol</returns>
+            public const string Eua = "ECF";
         }
 
         /// <summary>
@@ -712,6 +778,81 @@ namespace QuantConnect.Securities
             /// Ultra 10-Year U.S. Treasury Note Futures
             /// </summary>
             public const string UltraTenYearUSTreasuryNote = "TN";
+
+            /// <summary>
+            /// 30-Day Federal Funds Futures
+            /// </summary>
+            public const string FedFunds30Day = "FF";
+
+            /// <summary>
+            /// Euro BOBL five year
+            /// </summary>
+            public const string EuroBoblFiveYear = "BL";
+
+            /// <summary>
+            /// Euro BUND ten year
+            /// </summary>
+            public const string EuroBundTenYear = "BN";
+
+            /// <summary>
+            /// Euro SCHATZ two year
+            /// </summary>
+            public const string EuroSchatzTwoYear = "BS";
+
+            /// <summary>
+            /// Long gilt futures
+            /// </summary>
+            public const string LongGilt = "GL";
+
+            /// <summary>
+            /// 3 month LIBOR 
+            /// </summary>
+            public const string SterlingThreeMonth = "L";
+
+            /// <summary>
+            /// 3 month EURIBOR
+            /// </summary>
+            public const string EuriborThreeMonth = "UR";
+
+            /// <summary>
+            /// Euro OAT Futures
+            /// </summary>
+            public const string EuroOAT = "BF";
+
+            /// <summary>
+            /// Short-Term Euro-BTP Futures
+            /// </summary>
+            public const string EuroBTPShortTerm = "BTS";
+
+            /// <summary>
+            /// Long-Term Euro-BTP Futures
+            /// </summary>
+            public const string EuroBTPLongTerm = "BT";
+
+            /// <summary>
+            /// Euro-Buxl 30-Year Futures
+            /// </summary>
+            public const string EuroBuxl30Yr = "BX";
+
+            /// <summary>
+            /// Long Term Swiss Government Bond Futures
+            /// </summary>
+            public const string LongSwissGovBond = "CONF";
+
+            /// <summary>
+            /// 5-Year Deliverable Interest Rate Swap Futures
+            /// </summary>
+            public const string IRSwap5yr = "FI";
+
+            /// <summary>
+            /// 10-Year Deliverable Interest Rate Swap Futures
+            /// </summary>
+            public const string IRSwap10yr = "CNP";
+
+            /// <summary>
+            /// Three Month Euro Swiss Franc Futures
+            /// </summary>
+            public const string EuroSwiss3M = "S";
         }
 
         /// <summary>
@@ -750,6 +891,12 @@ namespace QuantConnect.Securities
             public const string Russell2000EMini = "RTY";
 
             /// <summary>
+            /// E-mini Russell 1000 ICE/CME combined Futures
+            /// </summary>
+            /// <returns>The symbol</returns>
+            public const string Russell1000EMini = "RM";
+
+            /// <summary>
             /// Nikkei-225 Dollar Futures
             /// </summary>
             /// <returns>The symbol</returns>
@@ -760,6 +907,12 @@ namespace QuantConnect.Securities
             /// </summary>
             /// <returns>The symbol</returns>
             public const string BloombergCommodityIndex = "AW";
+
+            /// <summary>
+            /// DJ UBS Commodity Index Futures
+            /// </summary>
+            /// <returns>The symbol</returns>
+            public const string DjUbsCommodityIndex = "AI";
 
             /// <summary>
             /// E-mini Nasdaq-100 Biotechnology Index Futures
@@ -813,6 +966,106 @@ namespace QuantConnect.Securities
             /// Hang Seng Index
             /// </summary>
             public const string HangSeng = "HSI";
+
+            /// <summary>
+            /// DAX index futures
+            /// </summary>
+            public const string DaxIndex = "DA";
+
+            /// <summary>
+            /// FTSE 100 index futures
+            /// </summary>
+            public const string Ftse100Index = "FT";
+
+            /// <summary>
+            /// Swiss Market Index futures
+            /// </summary>
+            public const string SwissMarketIndex = "SW";
+
+            /// <summary>
+            /// STOXX Europe 50 index futures
+            /// </summary>
+            public const string StoxxEurope50Index = "VH";
+
+            /// <summary>
+            /// STOXX Europe 600 index futures
+            /// </summary>
+            public const string StoxxEurope600Index = "FXXP";
+
+            /// <summary>
+            /// STOXX Europe 600 Banks index futures
+            /// </summary>
+            public const string StoxxEurope600BanksIndex = "XK";
+
+            /// <summary>
+            /// STOXX Europe 600 Oil and Gas index futures
+            /// </summary>
+            public const string StoxxEurope600OilGasIndex = "XO";
+
+            /// <summary>
+            /// EURO STOXX 50 index futures
+            /// </summary>
+            public const string EuroStoxx50Index = "XX";
+
+            /// <summary>
+            /// EURO STOXX banks index futures
+            /// </summary>
+            public const string EuroStoxxBanksIndex = "XA";
+
+            /// <summary>
+            /// EURO STOXX basic resources index futures
+            /// </summary>
+            public const string EuroStoxxBasicResourcesIndex = "XR";
+
+            /// <summary>
+            /// EURO STOXX basic resources index futures
+            /// </summary>
+            public const string EuroStoxxOilGasIndex = "XU";
+
+            /// <summary>
+            /// VXSTOXX Futures
+            /// </summary>
+            public const string VXSTOXXIndex = "FVS";
+
+            /// <summary>
+            /// MSCI Emerging Markets Mini Futures
+            /// </summary>
+            public const string MSCIEMMiniIndex = "MES";
+
+            /// <summary>
+            /// NYSE FANG+ Index Futures
+            /// </summary>
+            public const string FANGIndex = "FNG";
+
+            /// <summary>
+            /// MSCI EAFE Index Mini Futures
+            /// </summary>
+            public const string EAFEMiniIndex = "MG";
+
+            /// <summary>
+            /// E-Mini Energy Select Sector Futures
+            /// </summary>
+            public const string EnergySelectSector = "XAE";
+
+            /// <summary>
+            /// E-Mini Financial Select Sector Futures
+            /// </summary>
+            public const string FinancialSelectSector = "XAF";
+
+            /// <summary>
+            /// E-Mini Technology Select Sector Futures
+            /// </summary>
+            public const string TechSelectSector = "XAK";
+
+            /// <summary>
+            /// E-Mini Consumer Staples Select Sector Futures
+            /// </summary>
+            public const string ConsumerSelectSector = "XAP";
+
+            /// <summary>
+            /// E-Mini Utilities Select Sector Futures
+            /// </summary>
+            public const string UtilitiesSelectSector = "XAU";
         }
 
         /// <summary>
@@ -929,6 +1182,13 @@ namespace QuantConnect.Securities
             public const string Coffee = "KC";
 
             /// <summary>
+            /// Robusta Coffee Futures
+            /// </summary>
+            /// <returns>The symbol</returns>
+            public const string RobustaCoffee = "RC";
+
+
+            /// <summary>
             /// Sugar #11 Futures ICE
             /// </summary>
             /// <returns>The symbol</returns>
@@ -941,10 +1201,22 @@ namespace QuantConnect.Securities
             public const string Sugar11CME = "YO";
 
             /// <summary>
+            /// White Sugar Futures
+            /// </summary>
+            /// <returns>The symbol</returns>
+            public const string WhiteSugar = "W";
+
+            /// <summary>
             /// Cocoa Futures
             /// </summary>
             /// <returns>The symbol</returns>
             public const string Cocoa = "CC";
+
+            /// <summary>
+            /// London Cocoa Futures
+            /// </summary>
+            /// <returns>The symbol</returns>
+            public const string LondonCocoa = "C";
         }
 
         /// <summary>
