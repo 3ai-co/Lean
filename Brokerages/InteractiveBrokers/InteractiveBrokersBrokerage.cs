@@ -104,10 +104,18 @@ namespace QuantConnect.Brokerages.InteractiveBrokers
         private readonly Dictionary<string, string> _futuresExchanges = new Dictionary<string, string>
         {
             { Market.CME, "GLOBEX" },
+            { Market.SGX, "GLOBEX" },
+            { Market.CMECrypto, "CMECRYPTO" },
             { Market.NYMEX, "NYMEX" },
             { Market.COMEX, "NYMEX" },
             { Market.CBOT, "ECBOT" },
             { Market.ICE, "NYBOT" },
+            { Market.ICEIPE, "IPE" },
+            { Market.ICEEU, "ICEEU" },
+            { Market.ICEEUSoft, "ICEEUSOFT" },
+            { Market.ICENYSELIFFE, "NYSELIFFE" },
+            { Market.EurexDtb, "DTB" },
+            { Market.EurexSoffex, "SOFFEX" },
             { Market.CBOE, "CFE" }
         };
 
@@ -1922,6 +1930,7 @@ namespace QuantConnect.Brokerages.InteractiveBrokers
                     symbol.SecurityType,
                     Currencies.USD);
 
+                contract.Currency = symbolProperties.QuoteCurrency;
                 contract.Multiplier = Convert.ToInt32(symbolProperties.ContractMultiplier).ToStringInvariant();
 
                 contract.IncludeExpired = includeExpired;

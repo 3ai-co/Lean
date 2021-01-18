@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "QuantConnect.Lean.Launcher": {
+      "commandName": "Project",
+      "commandLineArgs": "--config d:\\temp\\lean\\config.json"
+    }
+  }
+}

@@ -60,7 +60,13 @@ namespace QuantConnect
             Tuple.Create(CME, 23),
             Tuple.Create(SGX, 24),
             Tuple.Create(HKFE, 25),
-            Tuple.Create(Eurex, 26),
+            Tuple.Create(EurexDtb, 26),
+            Tuple.Create(EurexSoffex, 27),
+            Tuple.Create(ICEEU, 28),
+            Tuple.Create(ICEEUSoft, 29),
+            Tuple.Create(ICEIPE, 30),
+            Tuple.Create(ICENYSELIFFE, 31),
+            Tuple.Create(CMECrypto, 32),
         };
 
         static Market()
@@ -121,6 +127,26 @@ namespace QuantConnect
         public const string ICE = "ice";
 
         /// <summary>
+        /// ICEIPE
+        /// </summary>
+        public const string ICEIPE = "iceipe";
+
+        /// <summary>
+        /// ICEEU
+        /// </summary>
+        public const string ICEEU = "iceeu";
+
+        /// <summary>
+        /// ICE
+        /// </summary>
+        public const string ICEEUSoft = "iceeusoft";
+
+        /// <summary>
+        /// ICE NYSE LIFFE
+        /// </summary>
+        public const string ICENYSELIFFE = "icenyseliffe";
+
+        /// <summary>
         /// CBOE
         /// </summary>
         public const string CBOE = "cboe";
@@ -141,6 +167,11 @@ namespace QuantConnect
         public const string CME = "cme";
 
         /// <summary>
+        /// CME Crypto
+        /// </summary>
+        public const string CMECrypto = "cmecrypto";
+
+        /// <summary>
         /// Singapore Exchange
         /// </summary>
         public const string SGX = "sgx";
@@ -156,10 +187,15 @@ namespace QuantConnect
         public const string GDAX = "gdax";
 
         /// <summary>
-        /// Eurex futures
+        /// Eurex futures DTB
         /// </summary>
-        public const string Eurex = "eurex";
-        
+        public const string EurexDtb = "eurex";
+
+        /// <summary>
+        /// Eurex futures SOFFEX
+        /// </summary>
+        public const string EurexSoffex = "eurexsoffex";
+
         /// <summary>
         /// Kraken
         /// </summary>

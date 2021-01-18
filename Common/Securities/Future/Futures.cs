@@ -909,12 +909,6 @@ namespace QuantConnect.Securities
             public const string BloombergCommodityIndex = "AW";
 
             /// <summary>
-            /// DJ UBS Commodity Index Futures
-            /// </summary>
-            /// <returns>The symbol</returns>
-            public const string DjUbsCommodityIndex = "AI";
-
-            /// <summary>
             /// E-mini Nasdaq-100 Biotechnology Index Futures
             /// </summary>
             /// <returns>The symbol</returns>
