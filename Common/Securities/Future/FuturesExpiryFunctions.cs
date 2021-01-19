@@ -559,6 +559,140 @@ namespace QuantConnect.Securities.Future
                     return priorBusinessDay.Add(new TimeSpan(16, 0, 0));
                 })
             },
+
+            // DAX
+            {Symbol.Create(Futures.Indices.DaxIndex, SecurityType.Future, Market.EurexDtb), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+
+            // MSCI Emerging Markets
+            {Symbol.Create(Futures.Indices.MSCIEMMiniIndex, SecurityType.Future, Market.ICENYSELIFFE), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+
+            // NYSE FANG+
+            {Symbol.Create(Futures.Indices.FANGIndex, SecurityType.Future, Market.ICE), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+            // FTSE 100
+            {Symbol.Create(Futures.Indices.Ftse100Index, SecurityType.Future, Market.ICEEU), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+
+            // VXStoxx
+            {Symbol.Create(Futures.Indices.VXSTOXXIndex, SecurityType.Future, Market.EurexDtb), (time =>
+                {
+                    // Penultimate friday, then back 2 business days (or last friday - 9 days)
+                    return FuturesExpiryUtilityFunctions.LastWeekday(time, DayOfWeek.Friday).AddDays(-9);
+                })
+            },
+
+            // Stoxx Europe 600 Index Futures
+            {Symbol.Create(Futures.Indices.StoxxEurope600Index, SecurityType.Future, Market.EurexDtb), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+            // MSCI EAFE MiniÂ Futures
+            {Symbol.Create(Futures.Indices.EAFEMiniIndex, SecurityType.Future, Market.ICENYSELIFFE), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+            // Russell 1000 eMini ICE/CME Combined
+            {Symbol.Create(Futures.Indices.Russell1000EMini, SecurityType.Future, Market.CME), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdWednesday(time).AddDays(-2); // todo: holidays
+                })
+            },
+
+            // Swiss Market Index Futures
+            {Symbol.Create(Futures.Indices.SwissMarketIndex, SecurityType.Future, Market.EurexSoffex), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+            // STOXX Europe 50 Index Futures
+            {Symbol.Create(Futures.Indices.StoxxEurope50Index, SecurityType.Future, Market.EurexDtb), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+            // Euro Stoxx Banks Futures
+            {Symbol.Create(Futures.Indices.EuroStoxxBanksIndex, SecurityType.Future, Market.EurexDtb), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+            // E-Mini Energy Select Sector Futures
+            {Symbol.Create(Futures.Indices.EnergySelectSector, SecurityType.Future, Market.CME), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+            // E-Mini Financial Select Sector Futures
+            {Symbol.Create(Futures.Indices.FinancialSelectSector, SecurityType.Future, Market.CME), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+            // E-Mini Technology Select Sector Futures
+            {Symbol.Create(Futures.Indices.TechSelectSector, SecurityType.Future, Market.CME), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+            // E-Mini Consumer Staples Select Sector Futures
+            {Symbol.Create(Futures.Indices.ConsumerSelectSector, SecurityType.Future, Market.CME), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+            // E-Mini Utilities Select Sector Futures
+            {Symbol.Create(Futures.Indices.UtilitiesSelectSector, SecurityType.Future, Market.CME), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+            // Stoxx Europe 600 Banks Futures
+            {Symbol.Create(Futures.Indices.StoxxEurope600BanksIndex, SecurityType.Future, Market.EurexDtb), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+            // Stoxx Europe 600 Oil & Gas Futures
+            {Symbol.Create(Futures.Indices.StoxxEurope600OilGasIndex, SecurityType.Future, Market.EurexDtb), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+            // Euro Stoxx Basic Resources Futures
+            {Symbol.Create(Futures.Indices.EuroStoxxBasicResourcesIndex, SecurityType.Future, Market.EurexDtb), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+            // Euro Stoxx Oil & Gas Futures
+            {Symbol.Create(Futures.Indices.EuroStoxxOilGasIndex, SecurityType.Future, Market.EurexDtb), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+            // EURO STOXX 50 Index Futures
+            {Symbol.Create(Futures.Indices.EuroStoxx50Index, SecurityType.Future, Market.EurexDtb), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+
             // Forestry Group
             // Random Length Lumber (LBS): https://www.cmegroup.com/trading/agricultural/lumber-and-pulp/random-length-lumber_contract_specifications.html
             {Symbol.Create(Futures.Forestry.RandomLengthLumber, SecurityType.Future, Market.CME), (time =>
@@ -650,6 +784,14 @@ namespace QuantConnect.Securities.Future
                     return lastBusinessDay;
                 })
             },
+            // Rough Rice
+            {Symbol.Create(Futures.Grains.RoughRice, SecurityType.Future, Market.CBOT), (time =>
+                {
+                    // 15th of the month -1BD.  Holidays todo.
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(new DateTime(time.Year, time.Month, 15), -1);
+                })
+            },
+
             // Currencies group
             // U.S. Dollar Index(R) Futures (DX): https://www.theice.com/products/194/US-Dollar-Index-Futures
             {Symbol.Create(Futures.Currencies.USD, SecurityType.Future, Market.ICE), (time =>
@@ -858,12 +1000,10 @@ namespace QuantConnect.Securities.Future
                 })
             },
             // Bitcoin (BTC): https://www.cmegroup.com/trading/equity-index/us-index/bitcoin_contract_specifications.html
-            {Symbol.Create(Futures.Currencies.BTC, SecurityType.Future, Market.CME), (time =>
+            {Symbol.Create(Futures.Currencies.BTC, SecurityType.Future, Market.CMECrypto), (time =>
                 {
                     // Trading terminates at 4:00 p.m. London time on the last Friday of the contract month. If that day is not a business day in both the U.K. and the US, trading terminates on the preceding day that is a business day for both the U.K. and the U.S..
-                    var lastFriday = (from day in Enumerable.Range(1, DateTime.DaysInMonth(time.Year, time.Month))
-                                      where new DateTime(time.Year, time.Month, day).DayOfWeek == DayOfWeek.Friday
-                                      select new DateTime(time.Year, time.Month, day)).Last();
+                    var lastFriday = FuturesExpiryUtilityFunctions.LastWeekday(time, DayOfWeek.Friday);
 
                     var holidays = MarketHoursDatabase.FromDataFolder()
                         .GetEntry(Market.CME, Futures.Currencies.AUDNZD, SecurityType.Future)
@@ -1011,6 +1151,56 @@ namespace QuantConnect.Securities.Future
                     return secondBusinessDayPrecedingThirdWednesday.Add(new TimeSpan(14, 16, 0));
                 })
             },
+            // Euro/Swiss Franc Physically Deliverable Future
+            {Symbol.Create(Futures.Currencies.EURCHF, SecurityType.Future, Market.CME), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.CME, Futures.Currencies.EURCHF, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(
+                        FuturesExpiryUtilityFunctions.ThirdWednesday(time), -2, false, holidays);
+                })
+            },
+            // Euro/British Pound Futures
+            {Symbol.Create(Futures.Currencies.EURGBP, SecurityType.Future, Market.CME), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.CME, Futures.Currencies.EURGBP, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(
+                        FuturesExpiryUtilityFunctions.ThirdWednesday(time), -2, false, holidays);
+                })
+            },
+            // Euro/Japanese Yen Futures
+            {Symbol.Create(Futures.Currencies.EURJPY, SecurityType.Future, Market.CME), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                })
+            },
+            // Swedish Krona Futures
+            {Symbol.Create(Futures.Currencies.SEK, SecurityType.Future, Market.CME), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.CME, Futures.Currencies.SEK, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(
+                        FuturesExpiryUtilityFunctions.ThirdWednesday(time), -2, false, holidays);
+                })
+            },
+            // Indian Rupee/USD Futures
+            {Symbol.Create(Futures.Currencies.SIR, SecurityType.Future, Market.CME), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.CME, Futures.Currencies.SIR, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    return FuturesExpiryUtilityFunctions.NthLastBusinessDay(time, 3, holidays);
+                })
+            },
+
             // Financials group
             // Y30TreasuryBond (ZB): http://www.cmegroup.com/trading/interest-rates/us-treasury/30-year-us-treasury-bond_contract_specifications.html
             {Symbol.Create(Futures.Financials.Y30TreasuryBond, SecurityType.Future, Market.CBOT), (time =>
@@ -1096,6 +1286,201 @@ namespace QuantConnect.Securities.Future
                     return FuturesExpiryUtilityFunctions.NthLastBusinessDay(time, 8);
                 })
             },
+            // Three Month Euro Swiss Franc Futures
+            {Symbol.Create(Futures.Financials.EuroSwiss3M, SecurityType.Future, Market.ICEEU), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.ICEEU, Futures.Financials.EuroSwiss3M, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(
+                        FuturesExpiryUtilityFunctions.ThirdWednesday(time), -2, false, holidays);
+                })
+            },
+            // Sterling 3-MonthÂ Futures
+            {Symbol.Create(Futures.Financials.SterlingThreeMonth, SecurityType.Future, Market.ICEEU), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.ThirdWednesday(time);
+                })
+            },
+            //Euro-OAT Futures
+            {Symbol.Create(Futures.Financials.EuroOAT, SecurityType.Future, Market.EurexDtb), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.EurexDtb, Futures.Financials.EuroOAT, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    var tenth = new DateTime(time.Year, time.Month, 10);
+                    while (!tenth.IsCommonBusinessDay() || holidays.Contains(tenth))
+                    {
+                        tenth = tenth.AddDays(1);
+                    }
+
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(tenth, -2);
+                })
+            },
+            //Euro-Bobl 5-YearÂ Futures
+            {Symbol.Create(Futures.Financials.EuroBoblFiveYear, SecurityType.Future, Market.EurexDtb), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.EurexDtb, Futures.Financials.EuroBoblFiveYear, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    var tenth = new DateTime(time.Year, time.Month, 10);
+                    while (!tenth.IsCommonBusinessDay() || holidays.Contains(tenth))
+                    {
+                        tenth = tenth.AddDays(1);
+                    }
+
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(tenth, -2);
+                })
+            },
+            //Euro-Bund 10-YearÂ Futures
+            {Symbol.Create(Futures.Financials.EuroBundTenYear, SecurityType.Future, Market.EurexDtb), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.EurexDtb, Futures.Financials.EuroBundTenYear, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    var tenth = new DateTime(time.Year, time.Month, 10);
+                    while (!tenth.IsCommonBusinessDay() || holidays.Contains(tenth))
+                    {
+                        tenth = tenth.AddDays(1);
+                    }
+
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(tenth, -2);
+                })
+            },
+            //Short-Term Euro-BTP Futures
+            {Symbol.Create(Futures.Financials.EuroBTPShortTerm, SecurityType.Future, Market.EurexDtb), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.EurexDtb, Futures.Financials.EuroBTPShortTerm, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    var tenth = new DateTime(time.Year, time.Month, 10);
+                    while (!tenth.IsCommonBusinessDay() || holidays.Contains(tenth))
+                    {
+                        tenth = tenth.AddDays(1);
+                    }
+
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(tenth, -2);
+                })
+            },
+            //Long-Term Euro-BTP Futures
+            {Symbol.Create(Futures.Financials.EuroBTPLongTerm, SecurityType.Future, Market.EurexDtb), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.EurexDtb, Futures.Financials.EuroBTPLongTerm, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    var tenth = new DateTime(time.Year, time.Month, 10);
+                    while (!tenth.IsCommonBusinessDay() || holidays.Contains(tenth))
+                    {
+                        tenth = tenth.AddDays(1);
+                    }
+
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(tenth, -2);
+                })
+            },
+            //Euro-Buxl 30-YearÂ Futures
+            {Symbol.Create(Futures.Financials.EuroBuxl30Yr, SecurityType.Future, Market.EurexDtb), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.EurexDtb, Futures.Financials.EuroBuxl30Yr, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    var tenth = new DateTime(time.Year, time.Month, 10);
+                    while (!tenth.IsCommonBusinessDay() || holidays.Contains(tenth))
+                    {
+                        tenth = tenth.AddDays(1);
+                    }
+
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(tenth, -2);
+                })
+            },
+            //Euro-Schatz 2-YearÂ Futures
+            {Symbol.Create(Futures.Financials.EuroSchatzTwoYear, SecurityType.Future, Market.EurexDtb), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.EurexDtb, Futures.Financials.EuroSchatzTwoYear, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    var tenth = new DateTime(time.Year, time.Month, 10);
+                    while (!tenth.IsCommonBusinessDay() || holidays.Contains(tenth))
+                    {
+                        tenth = tenth.AddDays(1);
+                    }
+
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(tenth, -2);
+                })
+            },
+            //Long Term Swiss Government Bond Futures
+            {Symbol.Create(Futures.Financials.LongSwissGovBond, SecurityType.Future, Market.EurexSoffex), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.EurexSoffex, Futures.Financials.LongSwissGovBond, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    var tenth = new DateTime(time.Year, time.Month, 10);
+                    while (!tenth.IsCommonBusinessDay() || holidays.Contains(tenth))
+                    {
+                        tenth = tenth.AddDays(1);
+                    }
+
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(tenth, -2);
+                })
+            },
+            //30-Day Federal FundsÂ Futures
+            {Symbol.Create(Futures.Financials.FedFunds30Day, SecurityType.Future, Market.CBOT), (time =>
+                {
+                    return FuturesExpiryUtilityFunctions.NthLastBusinessDay(time, 1);
+                })
+            },
+            //5-Year Deliverable Interest Rate SwapÂ Futures
+            {Symbol.Create(Futures.Financials.IRSwap5yr, SecurityType.Future, Market.CBOT), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.CBOT, Futures.Financials.IRSwap5yr, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(
+                        FuturesExpiryUtilityFunctions.ThirdWednesday(time), -2, false, holidays);
+                })
+            },
+            //Long GiltÂ Futures
+            {Symbol.Create(Futures.Financials.LongGilt, SecurityType.Future, Market.ICEEU), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.ICEEU, Futures.Financials.LongGilt, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    return FuturesExpiryUtilityFunctions.NthLastBusinessDay(time, 3, holidays);
+                })
+            },
+            //10-Year Deliverable Interest Rate SwapÂ Futures
+            {Symbol.Create(Futures.Financials.IRSwap10yr, SecurityType.Future, Market.CBOT), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.CBOT, Futures.Financials.IRSwap10yr, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(
+                        FuturesExpiryUtilityFunctions.ThirdWednesday(time), -2, false, holidays);
+                })
+            },
+            //Euribor 3-MonthÂ Futures
+            {Symbol.Create(Futures.Financials.EuriborThreeMonth, SecurityType.Future, Market.ICEEU), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.ICEEU, Futures.Financials.EuriborThreeMonth, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(
+                        FuturesExpiryUtilityFunctions.ThirdWednesday(time), -2, false, holidays);
+                })
+            },
+
             // Energies group
             // Propane Non LDH Mont Belvieu (1S): https://www.cmegroup.com/trading/energy/petrochemicals/propane-non-ldh-mt-belvieu-opis-balmo-swap_contract_specifications.html
             {Symbol.Create(Futures.Energies.PropaneNonLDHMontBelvieu, SecurityType.Future, Market.NYMEX), (time =>
@@ -1972,7 +2357,7 @@ namespace QuantConnect.Securities.Future
                 })
             },
             // Brent Crude (B) : https://www.theice.com/products/219/Brent-Crude-Futures
-            {Symbol.Create(Futures.Energies.BrentCrude, SecurityType.Future, Market.ICE), (time =>
+            {Symbol.Create(Futures.Energies.BrentCrude, SecurityType.Future, Market.ICEIPE), (time =>
                 {
                     //Trading shall cease at the end of the designated settlement period on the last Business Day of the second month
                     //preceding the relevant contract month (e.g. the March contract month will expire on the last Business Day of January).
@@ -1984,7 +2369,7 @@ namespace QuantConnect.Securities.Future
                 })
             },
             // Low Sulphur Gasoil Futures (G): https://www.theice.com/products/34361119/Low-Sulphur-Gasoil-Futures
-            {Symbol.Create(Futures.Energies.LowSulfurGasoil, SecurityType.Future, Market.ICE), (time =>
+            {Symbol.Create(Futures.Energies.LowSulfurGasoil, SecurityType.Future, Market.ICEIPE), (time =>
                 {
                     //Trading shall cease at 12:00 hours London Time, 2 business days prior to the 14th calendar day of the delivery month.
                     var fourteenthDay = new DateTime(time.Year,time.Month,14);
@@ -1992,6 +2377,58 @@ namespace QuantConnect.Securities.Future
                     return twelfthDay.Add(new TimeSpan(12,0,0));
                 })
             },
+            // EUA Futures ICE
+            {Symbol.Create(Futures.Energies.Eua, SecurityType.Future, Market.ICEIPE), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.ICEIPE, Futures.Energies.Eua, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    var lastMonday = FuturesExpiryUtilityFunctions.LastWeekday(time, DayOfWeek.Monday);
+                    if (Enumerable.Range(0,5).Where(d => holidays.Contains(lastMonday.AddDays(d))).Any())
+                    {
+                        // move to penultimate monday
+                        lastMonday = lastMonday.AddDays(-7);
+                    }
+                    return lastMonday;
+                })
+            },
+            // NYH (RBOB) Gasoline Futures ICE
+            {Symbol.Create(Futures.Energies.NyhRbobGasoline, SecurityType.Future, Market.ICEIPE), (time =>
+                {
+                    // uses NYMEX holidays, not ICE
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.NYMEX, Futures.Energies.Gasoline, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    var priorMonth = time.AddMonths(-1);
+                    return FuturesExpiryUtilityFunctions.NthLastBusinessDay(priorMonth, 2, holidays);
+                })
+            },
+            // UK Natural Gas Futures ICE
+            {Symbol.Create(Futures.Energies.UkNaturalGas, SecurityType.Future, Market.ICEIPE), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.ICEIPE, Futures.Energies.UkNaturalGas, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    var firstOfMonth = new DateTime(time.Year, time.Month, 1);
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(firstOfMonth, -2, false, holidays);
+                })
+            },
+            // Heating Oil Futures ICE
+            {Symbol.Create(Futures.Energies.HeatingOilIce, SecurityType.Future, Market.ICEIPE), (time =>
+                {
+                    // uses NYMEX holidays, not ICE
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.NYMEX, Futures.Energies.Gasoline, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    var priorMonth = time.AddMonths(-1);
+                    return FuturesExpiryUtilityFunctions.NthLastBusinessDay(priorMonth, 2, holidays);
+                })
+            },
+
             // Meats group
             // LiveCattle (LE): http://www.cmegroup.com/trading/agricultural/livestock/live-cattle_contract_specifications.html
             {Symbol.Create(Futures.Meats.LiveCattle, SecurityType.Future, Market.CME), (time =>
@@ -2131,6 +2568,44 @@ namespace QuantConnect.Securities.Future
                     return FuturesExpiryUtilityFunctions.NthLastBusinessDay(time, 12, holidays);
                 })
             },
+            // London Cocoa Futures ICE
+            {Symbol.Create(Futures.Softs.LondonCocoa, SecurityType.Future, Market.ICEEUSoft), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.ICEEUSoft, Futures.Softs.LondonCocoa, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+
+                    return FuturesExpiryUtilityFunctions.NthLastBusinessDay(time, 12, holidays);
+                })
+            },
+            // Robusta CoffeeÂ Futures
+            {Symbol.Create(Futures.Softs.RobustaCoffee, SecurityType.Future, Market.ICEEUSoft), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.ICEEUSoft, Futures.Softs.RobustaCoffee, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+
+                    return FuturesExpiryUtilityFunctions.NthLastBusinessDay(time, 5, holidays);
+                })
+            },
+            // White Sugar Futures ICE
+           {Symbol.Create(Futures.Softs.WhiteSugar, SecurityType.Future, Market.ICEEUSoft), (time =>
+                {
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.ICEEUSoft, Futures.Softs.WhiteSugar, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    var candidate = new DateTime(time.Year, time.Month, 1).AddDays(-16);
+                    while(!candidate.IsCommonBusinessDay() || holidays.Contains(candidate))
+                    {
+                        candidate = candidate.AddDays(1);
+                    }
+                    return candidate;
+                })
+            },
+
             // Dairy Group
             // Cash-settled Butter (CB): https://www.cmegroup.com/trading/agricultural/dairy/cash-settled-butter_contract_specifications.html
             {Symbol.Create(Futures.Dairy.CashSettledButter, SecurityType.Future, Market.CME), (time =>

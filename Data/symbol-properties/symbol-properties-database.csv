@@ -269,7 +269,7 @@ hkfe,HSI,future,Hang Seng Index,HKD,50,1,1.0
 eurex,BF,future,Euro-OAT Futures,EUR,1000.0,0.01,1.0
 eurex,BL,future,Euro-Bobl 5-Year Futures,EUR,1000.0,0.01,1.0
 eurex,BN,future,Euro-Bund 10-Year Futures,EUR,1000.0,0.01,1.0
-eurex,BS,future,Euro-Schatz 2-Year Futures,EUR,25.0,0.5,1.0
+eurex,BS,future,Euro-Schatz 2-Year Futures,EUR,1000.0,0.005,1.0
 eurex,BT,future,Long-Term Euro-BTP Futures,EUR,1000.0,0.01,1.0
 eurex,BTS,future,Short-Term Euro-BTP Futures,EUR,1000.0,0.01,1.0
 eurex,BX,future,Euro-Buxl 30-Year Futures,EUR,1000.0,0.02,1.0
