@@ -376,15 +376,20 @@ namespace QuantConnect.Securities.Future
             { Futures.Energies.BrentLastDayFinancial, 2 },
             { Futures.Energies.CrudeOilWTI, 1 },
             { Futures.Energies.Gasoline, 1 },
+            { Futures.Energies.NyhRbobGasoline, 1 },
             { Futures.Energies.HeatingOil, 1 },
+            { Futures.Energies.HeatingOilIce, 1 },
             { Futures.Energies.MarsArgusVsWTITradeMonth, 1 },
             { Futures.Energies.NaturalGas, 1 },
             { Futures.Energies.NaturalGasHenryHubLastDayFinancial, 1 },
             { Futures.Energies.NaturalGasHenryHubPenultimateFinancial, 1 },
+            { Futures.Energies.UkNaturalGas, 1 },
             { Futures.Energies.WTIHoustonArgusVsWTITradeMonth, 1 },
             { Futures.Energies.WTIHoustonCrudeOil, 1 },
             { Futures.Softs.Sugar11, 1 },
-            { Futures.Softs.Sugar11CME, 1 }
+            { Futures.Softs.Sugar11CME, 1 },
+            { Futures.Softs.WhiteSugar, 1 },
+            { Futures.Currencies.BRL, 1 }
         };
     }
 }

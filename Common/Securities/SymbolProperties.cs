@@ -44,7 +44,8 @@ namespace QuantConnect.Securities
         public decimal ContractMultiplier
         {
             get;
-            protected set;
+            // SJ - hack to support variable multiplier futures (eg UK Natural Gas)
+            set;
         }
 
         /// <summary>

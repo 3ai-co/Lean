@@ -180,7 +180,7 @@ iceipe,ECF,future,EUA Futures ICE,EUR,1000.0,0.01,1.0
 iceipe,IG,future,NYH (RBOB) Gasoline Futures ICE,USD,42000.0,0.0001,1.0
 iceipe,IO,future,Heating Oil Futures ICE,USD,42000.0,0.0001,1.0
 iceeusoft,RC,future,Robusta Coffee Futures,USD,10.0,1,1.0
-iceipe,UNG,future,UK Natural Gas Futures ICE,GBP,31000.0,0.0001,1.0
+iceipe,UNG,future,UK Natural Gas Futures ICE,GBP,0.0,0.0001,1.0
 iceeusoft,W,future,White Sugar Futures ICE,USD,50.0,0.1,1.0
 iceeu,FT,future,FTSE 100 Index Futures,GBP,1000.0,0.005,1.0
 iceeu,GL,future,Long Gilt Futures,GBP,1000.0,0.01,1.0

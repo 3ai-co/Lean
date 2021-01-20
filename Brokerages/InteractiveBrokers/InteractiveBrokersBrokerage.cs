@@ -1902,13 +1902,16 @@ namespace QuantConnect.Brokerages.InteractiveBrokers
                 contract.Right = symbol.ID.OptionRight == OptionRight.Call ? IB.RightType.Call : IB.RightType.Put;
                 contract.Strike = Convert.ToDouble(symbol.ID.StrikePrice);
                 contract.Symbol = ibSymbol;
-                contract.Multiplier = _symbolPropertiesDatabase.GetSymbolProperties(
+                var multiplier = Convert.ToInt32(_symbolPropertiesDatabase.GetSymbolProperties(
                         symbol.ID.Market,
                         symbol,
                         symbol.SecurityType,
                         _algorithm.Portfolio.CashBook.AccountCurrency)
-                    .ContractMultiplier
-                    .ToStringInvariant();
+                    .ContractMultiplier);
+                if (multiplier > 0)
+                {
+                    contract.Multiplier = multiplier.ToStringInvariant();
+                }
 
                 contract.TradingClass = GetTradingClass(contract, symbol);
                 contract.IncludeExpired = includeExpired;
@@ -2888,8 +2891,11 @@ namespace QuantConnect.Brokerages.InteractiveBrokers
                         symbol,
                         symbol.SecurityType,
                         Currencies.USD);
-
-                    contract.Multiplier = Convert.ToInt32(symbolProperties.ContractMultiplier).ToStringInvariant();
+                    var multiplier = Convert.ToInt32(symbolProperties.ContractMultiplier);
+                    if (multiplier > 0)
+                    {
+                        contract.Multiplier = multiplier.ToStringInvariant();
+                    }
                 }
 
                 // processing request

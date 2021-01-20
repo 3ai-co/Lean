@@ -601,7 +601,7 @@ namespace QuantConnect.Securities.Future
                     return FuturesExpiryUtilityFunctions.ThirdFriday(time);
                 })
             },
-            // MSCI EAFE MiniÂ Futures
+            // MSCI EAFE Mini Futures
             {Symbol.Create(Futures.Indices.EAFEMiniIndex, SecurityType.Future, Market.ICENYSELIFFE), (time =>
                 {
                     return FuturesExpiryUtilityFunctions.ThirdFriday(time);
@@ -610,7 +610,7 @@ namespace QuantConnect.Securities.Future
             // Russell 1000 eMini ICE/CME Combined
             {Symbol.Create(Futures.Indices.Russell1000EMini, SecurityType.Future, Market.CME), (time =>
                 {
-                    return FuturesExpiryUtilityFunctions.ThirdWednesday(time).AddDays(-2); // todo: holidays
+                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
                 })
             },
 
@@ -1176,7 +1176,12 @@ namespace QuantConnect.Securities.Future
             // Euro/Japanese Yen Futures
             {Symbol.Create(Futures.Currencies.EURJPY, SecurityType.Future, Market.CME), (time =>
                 {
-                    return FuturesExpiryUtilityFunctions.ThirdFriday(time);
+                    var holidays = MarketHoursDatabase.FromDataFolder()
+                        .GetEntry(Market.CME, Futures.Currencies.EURJPY, SecurityType.Future)
+                        .ExchangeHours
+                        .Holidays;
+                    return FuturesExpiryUtilityFunctions.AddBusinessDays(
+                        FuturesExpiryUtilityFunctions.ThirdWednesday(time), -2, false, holidays);
                 })
             },
             // Swedish Krona Futures
@@ -1297,7 +1302,7 @@ namespace QuantConnect.Securities.Future
                         FuturesExpiryUtilityFunctions.ThirdWednesday(time), -2, false, holidays);
                 })
             },
-            // Sterling 3-MonthÂ Futures
+            // Sterling 3-Month Futures
             {Symbol.Create(Futures.Financials.SterlingThreeMonth, SecurityType.Future, Market.ICEEU), (time =>
                 {
                     return FuturesExpiryUtilityFunctions.ThirdWednesday(time);
@@ -1319,7 +1324,7 @@ namespace QuantConnect.Securities.Future
                     return FuturesExpiryUtilityFunctions.AddBusinessDays(tenth, -2);
                 })
             },
-            //Euro-Bobl 5-YearÂ Futures
+            //Euro-Bobl 5-Year Futures
             {Symbol.Create(Futures.Financials.EuroBoblFiveYear, SecurityType.Future, Market.EurexDtb), (time =>
                 {
                     var holidays = MarketHoursDatabase.FromDataFolder()
@@ -1335,7 +1340,7 @@ namespace QuantConnect.Securities.Future
                     return FuturesExpiryUtilityFunctions.AddBusinessDays(tenth, -2);
                 })
             },
-            //Euro-Bund 10-YearÂ Futures
+            //Euro-Bund 10-Year Futures
             {Symbol.Create(Futures.Financials.EuroBundTenYear, SecurityType.Future, Market.EurexDtb), (time =>
                 {
                     var holidays = MarketHoursDatabase.FromDataFolder()
@@ -1383,7 +1388,7 @@ namespace QuantConnect.Securities.Future
                     return FuturesExpiryUtilityFunctions.AddBusinessDays(tenth, -2);
                 })
             },
-            //Euro-Buxl 30-YearÂ Futures
+            //Euro-Buxl 30-Year Futures
             {Symbol.Create(Futures.Financials.EuroBuxl30Yr, SecurityType.Future, Market.EurexDtb), (time =>
                 {
                     var holidays = MarketHoursDatabase.FromDataFolder()
@@ -1399,7 +1404,7 @@ namespace QuantConnect.Securities.Future
                     return FuturesExpiryUtilityFunctions.AddBusinessDays(tenth, -2);
                 })
             },
-            //Euro-Schatz 2-YearÂ Futures
+            //Euro-Schatz 2-Year Futures
             {Symbol.Create(Futures.Financials.EuroSchatzTwoYear, SecurityType.Future, Market.EurexDtb), (time =>
                 {
                     var holidays = MarketHoursDatabase.FromDataFolder()
@@ -1431,13 +1436,13 @@ namespace QuantConnect.Securities.Future
                     return FuturesExpiryUtilityFunctions.AddBusinessDays(tenth, -2);
                 })
             },
-            //30-Day Federal FundsÂ Futures
+            //30-Day Federal Funds Futures
             {Symbol.Create(Futures.Financials.FedFunds30Day, SecurityType.Future, Market.CBOT), (time =>
                 {
                     return FuturesExpiryUtilityFunctions.NthLastBusinessDay(time, 1);
                 })
             },
-            //5-Year Deliverable Interest Rate SwapÂ Futures
+            //5-Year Deliverable Interest Rate Swap Futures
             {Symbol.Create(Futures.Financials.IRSwap5yr, SecurityType.Future, Market.CBOT), (time =>
                 {
                     var holidays = MarketHoursDatabase.FromDataFolder()
@@ -1448,7 +1453,7 @@ namespace QuantConnect.Securities.Future
                         FuturesExpiryUtilityFunctions.ThirdWednesday(time), -2, false, holidays);
                 })
             },
-            //Long GiltÂ Futures
+            //Long Gilt Futures
             {Symbol.Create(Futures.Financials.LongGilt, SecurityType.Future, Market.ICEEU), (time =>
                 {
                     var holidays = MarketHoursDatabase.FromDataFolder()
@@ -1458,7 +1463,7 @@ namespace QuantConnect.Securities.Future
                     return FuturesExpiryUtilityFunctions.NthLastBusinessDay(time, 3, holidays);
                 })
             },
-            //10-Year Deliverable Interest Rate SwapÂ Futures
+            //10-Year Deliverable Interest Rate Swap Futures
             {Symbol.Create(Futures.Financials.IRSwap10yr, SecurityType.Future, Market.CBOT), (time =>
                 {
                     var holidays = MarketHoursDatabase.FromDataFolder()
@@ -1469,7 +1474,7 @@ namespace QuantConnect.Securities.Future
                         FuturesExpiryUtilityFunctions.ThirdWednesday(time), -2, false, holidays);
                 })
             },
-            //Euribor 3-MonthÂ Futures
+            //Euribor 3-Month Futures
             {Symbol.Create(Futures.Financials.EuriborThreeMonth, SecurityType.Future, Market.ICEEU), (time =>
                 {
                     var holidays = MarketHoursDatabase.FromDataFolder()
@@ -2579,7 +2584,7 @@ namespace QuantConnect.Securities.Future
                     return FuturesExpiryUtilityFunctions.NthLastBusinessDay(time, 12, holidays);
                 })
             },
-            // Robusta CoffeeÂ Futures
+            // Robusta Coffee Futures
             {Symbol.Create(Futures.Softs.RobustaCoffee, SecurityType.Future, Market.ICEEUSoft), (time =>
                 {
                     var holidays = MarketHoursDatabase.FromDataFolder()
@@ -2600,7 +2605,7 @@ namespace QuantConnect.Securities.Future
                     var candidate = new DateTime(time.Year, time.Month, 1).AddDays(-16);
                     while(!candidate.IsCommonBusinessDay() || holidays.Contains(candidate))
                     {
-                        candidate = candidate.AddDays(1);
+                        candidate = candidate.AddDays(-1);
                     }
                     return candidate;
                 })
