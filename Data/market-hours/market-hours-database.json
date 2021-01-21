@@ -519,6 +519,50 @@
       "earlyCloses": {},
       "lateOpens": {}
     },
+    "Future-eurexsoffex-[*]": {
+      "dataTimeZone": "UTC",
+      "exchangeTimeZone": "CET",
+      "sunday": [],
+      "monday": [
+        {
+          "start": "08:30:00",
+          "end": "17:00:00",
+          "state": "market"
+        }
+      ],
+      "tuesday": [
+        {
+          "start": "08:30:00",
+          "end": "17:00:00",
+          "state": "market"
+        }
+      ],
+      "wednesday": [
+        {
+          "start": "08:30:00",
+          "end": "17:00:00",
+          "state": "market"
+        }
+      ],
+      "thursday": [
+        {
+          "start": "08:30:00",
+          "end": "17:00:00",
+          "state": "market"
+        }
+      ],
+      "friday": [
+        {
+          "start": "08:30:00",
+          "end": "17:00:00",
+          "state": "market"
+        }
+      ],
+      "saturday": [],
+      "holidays": [],
+      "earlyCloses": {},
+      "lateOpens": {}
+    },
     "Future-eurexsoffex-CONF": {
       "dataTimeZone": "UTC",
       "exchangeTimeZone": "CET",
@@ -3351,6 +3395,50 @@
       "earlyCloses": {},
       "lateOpens": {}
     },
+    "Future-iceeusoft-[*]": {
+      "dataTimeZone": "UTC",
+      "exchangeTimeZone": "America/New_York",
+      "sunday": [],
+      "monday": [
+        {
+          "start": "04:30:00",
+          "end": "11:55:00",
+          "state": "market"
+        }
+      ],
+      "tuesday": [
+        {
+          "start": "04:30:00",
+          "end": "11:55:00",
+          "state": "market"
+        }
+      ],
+      "wednesday": [
+        {
+          "start": "04:30:00",
+          "end": "11:55:00",
+          "state": "market"
+        }
+      ],
+      "thursday": [
+        {
+          "start": "04:30:00",
+          "end": "11:55:00",
+          "state": "market"
+        }
+      ],
+      "friday": [
+        {
+          "start": "04:30:00",
+          "end": "11:55:00",
+          "state": "market"
+        }
+      ],
+      "saturday": [],
+      "holidays": [],
+      "earlyCloses": {},
+      "lateOpens": {}
+    },
     "Future-iceeusoft-C": {
       "dataTimeZone": "UTC",
       "exchangeTimeZone": "America/New_York",
@@ -3387,6 +3475,50 @@
         {
           "start": "04:30:00",
           "end": "11:55:00",
+          "state": "market"
+        }
+      ],
+      "saturday": [],
+      "holidays": [],
+      "earlyCloses": {},
+      "lateOpens": {}
+    },
+    "Future-iceipe-[*]": {
+      "dataTimeZone": "UTC",
+      "exchangeTimeZone": "America/New_York",
+      "sunday": [],
+      "monday": [
+        {
+          "start": "02:00:00",
+          "end": "12:00:00",
+          "state": "market"
+        }
+      ],
+      "tuesday": [
+        {
+          "start": "02:00:00",
+          "end": "12:00:00",
+          "state": "market"
+        }
+      ],
+      "wednesday": [
+        {
+          "start": "02:00:00",
+          "end": "12:00:00",
+          "state": "market"
+        }
+      ],
+      "thursday": [
+        {
+          "start": "02:00:00",
+          "end": "12:00:00",
+          "state": "market"
+        }
+      ],
+      "friday": [
+        {
+          "start": "02:00:00",
+          "end": "12:00:00",
           "state": "market"
         }
       ],
@@ -3711,6 +3843,76 @@
       "earlyCloses": {},
       "lateOpens": {}
     },
+    "Future-iceeu-[*]": {
+      "dataTimeZone": "UTC",
+      "exchangeTimeZone": "America/New_York",
+      "sunday": [
+        {
+          "start": "20:00:00",
+          "end": "1.00:00:00",
+          "state": "market"
+        }
+      ],
+      "monday": [
+        {
+          "start": "00:00:00",
+          "end": "16:00:00",
+          "state": "market"
+        },
+        {
+          "start": "20:00:00",
+          "end": "1.00:00:00",
+          "state": "market"
+        }
+      ],
+      "tuesday": [
+        {
+          "start": "00:00:00",
+          "end": "16:00:00",
+          "state": "market"
+        },
+        {
+          "start": "20:00:00",
+          "end": "1.00:00:00",
+          "state": "market"
+        }
+      ],
+      "wednesday": [
+        {
+          "start": "00:00:00",
+          "end": "16:00:00",
+          "state": "market"
+        },
+        {
+          "start": "20:00:00",
+          "end": "1.00:00:00",
+          "state": "market"
+        }
+      ],
+      "thursday": [
+        {
+          "start": "00:00:00",
+          "end": "16:00:00",
+          "state": "market"
+        },
+        {
+          "start": "20:00:00",
+          "end": "1.00:00:00",
+          "state": "market"
+        }
+      ],
+      "friday": [
+        {
+          "start": "00:00:00",
+          "end": "16:00:00",
+          "state": "market"
+        }
+      ],
+      "saturday": [],
+      "holidays": [],
+      "earlyCloses": {},
+      "lateOpens": {}
+    },
     "Future-iceeu-FT": {
       "dataTimeZone": "UTC",
       "exchangeTimeZone": "America/New_York",
@@ -3984,6 +4186,76 @@
       "lateOpens": {}
     },
     "Future-ice-FNG": {
+      "dataTimeZone": "UTC",
+      "exchangeTimeZone": "America/New_York",
+      "sunday": [
+        {
+          "start": "20:00:00",
+          "end": "1.00:00:00",
+          "state": "market"
+        }
+      ],
+      "monday": [
+        {
+          "start": "00:00:00",
+          "end": "18:00:00",
+          "state": "market"
+        },
+        {
+          "start": "20:00:00",
+          "end": "1.00:00:00",
+          "state": "market"
+        }
+      ],
+      "tuesday": [
+        {
+          "start": "00:00:00",
+          "end": "18:00:00",
+          "state": "market"
+        },
+        {
+          "start": "20:00:00",
+          "end": "1.00:00:00",
+          "state": "market"
+        }
+      ],
+      "wednesday": [
+        {
+          "start": "00:00:00",
+          "end": "18:00:00",
+          "state": "market"
+        },
+        {
+          "start": "20:00:00",
+          "end": "1.00:00:00",
+          "state": "market"
+        }
+      ],
+      "thursday": [
+        {
+          "start": "00:00:00",
+          "end": "18:00:00",
+          "state": "market"
+        },
+        {
+          "start": "20:00:00",
+          "end": "1.00:00:00",
+          "state": "market"
+        }
+      ],
+      "friday": [
+        {
+          "start": "00:00:00",
+          "end": "18:00:00",
+          "state": "market"
+        }
+      ],
+      "saturday": [],
+      "holidays": [],
+      "earlyCloses": {},
+      "lateOpens": {}
+    },
+    "Future-icenyseliffe-[*]": {
       "dataTimeZone": "UTC",
       "exchangeTimeZone": "America/New_York",
       "sunday": [
@@ -15503,6 +15775,102 @@
         "11/28/2019": "13:00:00",
         "11/29/2019": "13:45:00",
         "12/24/2019": "13:45:00"
+      }
+    },
+    "Future-cmecrypto-[*]": {
+      "dataTimeZone": "UTC",
+      "exchangeTimeZone": "America/Chicago",
+      "sunday": [
+        {
+          "start": "17:00:00",
+          "end": "1.00:00:00",
+          "state": "market"
+        }
+      ],
+      "monday": [
+        {
+          "start": "00:00:00",
+          "end": "16:00:00",
+          "state": "market"
+        },
+        {
+          "start": "17:00:00",
+          "end": "1.00:00:00",
+          "state": "market"
+        }
+      ],
+      "tuesday": [
+        {
+          "start": "00:00:00",
+          "end": "16:00:00",
+          "state": "market"
+        },
+        {
+          "start": "17:00:00",
+          "end": "1.00:00:00",
+          "state": "market"
+        }
+      ],
+      "wednesday": [
+        {
+          "start": "00:00:00",
+          "end": "16:00:00",
+          "state": "market"
+        },
+        {
+          "start": "17:00:00",
+          "end": "1.00:00:00",
+          "state": "market"
+        }
+      ],
+      "thursday": [
+        {
+          "start": "00:00:00",
+          "end": "16:00:00",
+          "state": "market"
+        },
+        {
+          "start": "17:00:00",
+          "end": "1.00:00:00",
+          "state": "market"
+        }
+      ],
+      "friday": [
+        {
+          "start": "00:00:00",
+          "end": "16:00:00",
+          "state": "market"
+        }
+      ],
+      "saturday": [],
+      "holidays": [
+        "12/25/2017",
+        "1/1/2018",
+        "3/30/2018",
+        "12/25/2018",
+        "4/19/2019",
+        "12/25/2019",
+        "1/1/2020"
+      ],
+      "earlyCloses": {
+        "1/15/2018": "12:00:00",
+        "2/19/2018": "12:00:00",
+        "5/28/2018": "12:00:00",
+        "7/3/2018": "12:15:00",
+        "7/4/2018": "12:00:00",
+        "9/3/2018": "12:00:00",
+        "11/22/2018": "12:00:00",
+        "11/23/2018": "12:15:00",
+        "12/24/2018": "12:15:00",
+        "1/21/2019": "12:00:00",
+        "2/18/2019": "12:00:00",
+        "5/27/2019": "12:00:00",
+        "7/3/2019": "12:15:00",
+        "7/4/2019": "12:00:00",
+        "9/2/2019": "12:00:00",
+        "11/28/2019": "12:00:00",
+        "11/29/2019": "12:15:00",
+        "12/24/2019": "12:15:00"
       }
     },
     "Future-cmecrypto-BTC": {
