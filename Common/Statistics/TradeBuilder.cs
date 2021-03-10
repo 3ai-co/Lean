@@ -134,12 +134,16 @@ namespace QuantConnect.Statistics
         {
             // If we have multiple fills per order, we assign the order fee only to its first fill
             // to avoid counting the same order fee multiple times.
-            var orderFee = 0m;
-            if (!_ordersWithFeesAssigned.Contains(fill.OrderId))
-            {
-                orderFee = feeInAccountCurrency;
-                _ordersWithFeesAssigned.Add(fill.OrderId);
-            }
+            //var orderFee = 0m;
+            //if (!_ordersWithFeesAssigned.Contains(fill.OrderId))
+            //{
+            //    orderFee = feeInAccountCurrency;
+            //    _ordersWithFeesAssigned.Add(fill.OrderId);
+            //}
+
+            // SJ - above logic is wrong, at least for Futures on IB - fee is broken down and assigned per fill,
+            // should always be included.
+            var orderFee = feeInAccountCurrency;
 
             switch (_groupingMethod)
             {

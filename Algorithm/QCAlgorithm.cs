@@ -157,7 +157,7 @@ namespace QuantConnect.Algorithm
             Schedule = new ScheduleManager(Securities, TimeZone);
 
             // initialize the trade builder
-            TradeBuilder = new TradeBuilder(FillGroupingMethod.FillToFill, FillMatchingMethod.FIFO);
+            TradeBuilder = new TradeBuilder(FillGroupingMethod.FlatToFlat, FillMatchingMethod.FIFO);
 
             SecurityInitializer = new BrokerageModelSecurityInitializer(new DefaultBrokerageModel(AccountType.Margin), SecuritySeeder.Null);
 
